@@ -1,6 +1,9 @@
-import HighlightJS from "highlight.js";
+import HighlightJS from 'highlight.js/lib/highlight';
+import typescript from 'highlight.js/lib/languages/typescript';
 import { Component, createMemo, mergeProps } from "solid-js";
 import { escapeHtml } from "./utils";
+
+HighlightJS.registerLanguage('typescript', typescript);
 
 type Props = {
   class?: string;
